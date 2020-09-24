@@ -1,0 +1,34 @@
+doctype html
+html(lang="en" dir="ltr")
+  
+  //- HEAD
+  head
+    
+    //- TITLE AND META TAGS
+    block title
+      title Jumbo
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    block meta
+      meta(name="description" content="I`m Jumbo a developer from shenzhen.")
+      meta(name="author" content="Jumbo")
+      meta(property="og:url" content="http://www.itzhangbao.com/")
+      meta(property="og:image" content="http://www.itzhangbao.com/includes/images/opengraph.png")
+    
+    //- INCLUDES
+    link(rel="icon" type="image/png" href="includes/images/favicon.png")
+    link(rel="stylesheet" href="includes/stylesheets/yahiarefaiea.lite.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js")
+    script(src="includes/javascripts/yahiarefaiea.lite.js")
+  
+  //- BODY
+  body
+    
+    include ../mixins/fields
+    include ../mixins/lists
+    
+    //- CONTENT
+    block content
+    
+    img(src="includes/images/identity.png" style="display: none" title="Yahia Refaiea identity" alt="Yahia Refaiea identity")

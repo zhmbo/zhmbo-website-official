@@ -1,0 +1,9 @@
+mixin field(name, placeholder, type='text')
+  .field
+    if type == 'textarea'
+      textarea(name=name placeholder=placeholder)
+    else
+      input(type=type name=name placeholder=placeholder)
+    .effect
+      - for (var a = 0; a < 4; a++)
+        div

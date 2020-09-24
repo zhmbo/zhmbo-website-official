@@ -1,0 +1,75 @@
+baseline= 28px
+
+//  RESPONSIVE
+alpha= 320px
+beta= 500px
+gamma= 600px
+delta= 992px
+
+//  COLORS
+green= #419d78
+greenAlpha= rgba(65, 157, 120, .14)
+yellow= #e0a458
+yellowAlpha= rgba(224, 164, 88, .14)
+red= #d9594c
+redAlpha= rgba(217, 89, 76, .14)
+blue= #53a2be
+blueAlpha= rgba(83, 162, 190, .14)
+grayscale= #666
+grayscaleAlpha= rgba(102, 102, 102, .14)
+
+background= #171a19
+contrast= #fff
+grey-high= #ddd
+grey= #aaa
+grey-low= #666
+
+selection-bg= transparent
+selection-color= inherit
+
+//  SELECTION
+selection(bg, color)
+  ::selection
+    background: bg
+    color: color
+  ::-moz-selection
+    background: bg
+    color: color
+
+//  OUTLINE
+outline= 1px dashed
+outline-color= contrast
+hasOutline(clr= outline-color)
+  &, &:hover
+    outline: outline transparent
+  &:not(:hover):focus
+    outline: outline clr
+
+//  ABSOLUTE
+makeAbsolute(tp=0, al=0, btm=auto, alt=auto)
+  position: absolute
+  if(tp!=auto)
+    top: tp
+  if(al!=auto)
+    {align}: al
+  if(btm!=auto)
+    bottom: btm
+  if(alt!=auto)
+    {align-alt}: alt
+
+//  TRANSITION
+duration= .7s
+easing= cubic-bezier(0.190,1.000,0.220,1.000)
+hasTransition(dur=duration, dly=0, d=0)
+  transition: all (dur+d) easing unit(dly+d, 's')
+
+//  GRABBABLE
+grabbable()
+  cursor: move
+  cursor: grab
+  cursor: -moz-grab
+  cursor: -webkit-grab
+  &:active
+    cursor: grabbing
+    cursor: -moz-grabbing
+    cursor: -webkit-grabbing

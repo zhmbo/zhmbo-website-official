@@ -1,0 +1,54 @@
+template= {
+  padding: {
+    top: container.padding.top + navigation.height + baseline*3.75,
+    bottom: baseline*2.75
+  }
+}
+
+templateAnimation(selector, length, d=duration1)
+  {selector}
+    show: length d
+  &:not(.current) {selector}
+    hide: length d
+
+//  TEMPLATE
+.template
+  display: none
+  makeAbsolute: 0 0 0 0
+  white-space: nowrap
+
+  //  MAIN
+  main
+    makeAbsolute: template.padding.top 0 template.padding.bottom
+    width: 100%
+    hasTransition()
+    @media (max-width: gamma - 1)
+      top: container.padding.top + navigation.height + baseline*2
+    span
+      display: block
+    h1 > *, .h1 > *
+      height: headline-height
+      hasTransition()
+      @media (max-width: gamma - 1)
+        height: headline-height*.6
+        line-height: headline-height*.6
+        font-size: font-headline*.6
+    .p, ul
+      margin-bottom: baseline*.75
+
+  //  FOOTER
+  footer
+    makeAbsolute: auto 0 (container.padding.bottom)
+
+  //  HEADLINE ANIMATION
+  templateAnimation('h1 > *', 2)
+  templateAnimation('.h1 > *', 2)
+  h1 > *, .h1 > *
+    mark:before
+      {align-alt}: 100%
+      animation: markAnimation duration easing duration*.5 forwards
+      @keyframes markAnimation
+        0%
+          {align-alt}: 100%
+        100%
+          {align-alt}: 0

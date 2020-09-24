@@ -1,0 +1,35 @@
+extends ../layouts/public
+
+block content
+  .wrapper
+    
+    canvas#stars
+    canvas#yahia
+    
+    //- CSSDA BADGE
+    //- include ../includes/cssda-badge
+    
+    //- CONTAINER
+    .container
+      
+      //- TEMPLATES
+      include ../templates/home
+      include ../templates/secret
+      include ../templates/bucket
+      include ../templates/bucketAll
+      include ../templates/projectsAll
+      include ../templates/thoughtsAll
+      include ../templates/aboutme
+      include ../templates/notFound
+      
+      //- IDENTITY
+      include ../includes/identity
+      
+      //- SIGNATURE
+      include ../includes/signature
+      
+      //- BURGER
+      include ../includes/burger
+      
+      //- AUDIO
+      include ../includes/audio

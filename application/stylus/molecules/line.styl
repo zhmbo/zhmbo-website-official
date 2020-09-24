@@ -1,0 +1,59 @@
+step= .03
+pattern= 1.04
+line= {
+  distance: baseline*2.5,
+  rotate: 5deg,
+  keyframe: 0
+}
+
+//  DEFINE VARIABLES
+dur= 0
+for i in 1..85
+  dur= (dur+step)*pattern
+  define('duration'+i, unit(dur, 's'))
+
+//  MOVE
+move(to, distance=line.distance, rotate=line.rotate)
+  if(to=='up')
+    opacity: 0
+    transform: translateY(- distance) rotate(- rotate)
+  if(to=='middle')
+    opacity: 1
+    transform: translateY(0) rotate(0)
+  if(to=='down')
+    opacity: 0
+    transform: translateY(distance) rotate(rotate)
+
+//  MULTI ANIMATION
+multiAnimation(length, dur=duration, dly=0, d=0)
+  for i in 1..length
+    d= (d+step)*pattern
+    &:nth-child({i})
+      animation-duration: dur+d
+      animation-delay: dly+d
+
+//  LINE ANIMATION
+lineAnimation(length, d=0)
+  line.keyframe= line.keyframe + 1
+  animation: lineNum+line.keyframe duration easing forwards
+  @keyframes lineNum{line.keyframe}
+    {block}
+  multiAnimation(length, duration, 0, d)
+
+//  SHOW
+show(length, d=0)
+  move('down')
+  +lineAnimation(length, d)
+    0%
+      move('down')
+    100%
+      move('middle')
+
+//  HIDE
+hide(length, d=0)
+  move('middle')
+  +lineAnimation(length, d)
+    0%
+      move('middle')
+    100%
+      move('up')
