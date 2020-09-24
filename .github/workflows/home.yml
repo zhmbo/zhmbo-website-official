@@ -4,7 +4,7 @@ name: home
 on:
   push:
     branches:
-      - pages-home
+      - master
 
 jobs: # 工作流
   build: # 自定义名称 - 工程改变时重新部署
