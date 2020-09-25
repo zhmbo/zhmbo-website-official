@@ -14,7 +14,7 @@ function home() {
     // 获取文件最后修改时间
     var strtime = document.lastModified
     // 将时间转换为date
-    var date = getLocalTime(8)
+    var date = getLocalTime(8, new Date(strtime))
 
     Y = date.getFullYear() + '-';
     M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
@@ -51,11 +51,11 @@ function home() {
 }
 
 // 得到标准时区的时间的函数
-function getLocalTime(i) {
+function getLocalTime(i, date) {
 
     //参数i为时区值数字，比如北京为东八区则输进8,西5输入-5
     if (typeof i !== 'number') return;
-    var d = new Date();
+    var d = date ? date : new Date();
 
     //得到1970年一月一日到现在的秒数
     var len = d.getTime();
