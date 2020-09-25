@@ -9,8 +9,16 @@ function home() {
     runtimeFunc()
 
     // update
+    // 获取控件
     var update_time = $('.template[data-template=home] update_time')
-    $(update_time).text(document.lastModified + '')
+    // 获取文件最后修改时间
+    var strtime = document.lastModified
+    // 将时间转换为date
+    var date = new Date(strtime)
+    // 转换时间戳后加 8个小时，github actions的运行环境存在8小时差
+    var time = date.getTime() + 28800000
+    // 时间戳转日期格式
+    $(update_time).text(new Date(time))
 }
 
 /**
