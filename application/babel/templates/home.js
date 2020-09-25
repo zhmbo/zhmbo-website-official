@@ -25,6 +25,7 @@ function home() {
     h = date.getHours() + ':';
     m = date.getMinutes() + ':';
     s = date.getSeconds();
+    console.log(date)
     console.log(Y + M + D + h + m + s); //呀麻碟
     $(update_time).text(Y + M + D + h + m + s)
 }
