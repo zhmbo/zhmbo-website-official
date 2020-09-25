@@ -27,17 +27,17 @@ var gulp = require("gulp"),
   php = "php",
   //  BANNER COMMENT
   comment =
-    "/*\n" +
-    " *  <%= pkg.name %> <%= pkg.version %>\n" +
-    " *  \n" +
-    " *  <%= pkg.description %>\n" +
-    " *  <%= pkg.url %>\n" +
-    " *  <%= pkg.author.email %>\n" +
-    " *  \n" +
-    " *  Last update on: <%= new Date().getUTCFullYear() %>/" +
-    "<%= new Date().getUTCMonth()+1 %>/<%= new Date().getUTCDate() %>\n" +
-    " *  ©<%= new Date().getFullYear() %> <%= pkg.author.name %>. all rights reserved.\n" +
-    " */\n\n";
+  "/*\n" +
+  " *  <%= pkg.name %> <%= pkg.version %>\n" +
+  " *  \n" +
+  " *  <%= pkg.description %>\n" +
+  " *  <%= pkg.url %>\n" +
+  " *  <%= pkg.author.email %>\n" +
+  " *  \n" +
+  " *  Last update on: <%= new Date().getUTCFullYear() %>/" +
+  "<%= new Date().getUTCMonth()+1 %>/<%= new Date().getUTCDate() %>\n" +
+  " *  ©<%= new Date().getFullYear() %> <%= pkg.author.name %>. all rights reserved.\n" +
+  " */\n\n";
 
 //  DELETE
 gulp.task("del", function () {
@@ -46,7 +46,11 @@ gulp.task("del", function () {
 
 //  BROWSER SYNC
 gulp.task("browserSync", function () {
-  browserSync({ server: { baseDir: dest } });
+  browserSync({
+    server: {
+      baseDir: dest
+    }
+  });
 });
 
 //  PUG
@@ -68,12 +72,18 @@ gulp.task("babel", function () {
     .src(babelSrc)
     .pipe(babel())
     .pipe(concat(file + ".js"))
-    .pipe(banner(comment, { pkg: pkg }))
+    .pipe(banner(comment, {
+      pkg: pkg
+    }))
     .pipe(gulp.dest(dest + "/" + assets + "/" + js))
 
     .pipe(uglify())
-    .pipe(banner(comment, { pkg: pkg }))
-    .pipe(rename({ extname: "." + min + ".js" }))
+    .pipe(banner(comment, {
+      pkg: pkg
+    }))
+    .pipe(rename({
+      extname: "." + min + ".js"
+    }))
     .pipe(gulp.dest(dest + "/" + assets + "/" + js));
 });
 
@@ -81,14 +91,22 @@ gulp.task("babel", function () {
 gulp.task("stylus", function () {
   return gulp
     .src(root + "/stylus/app.styl")
-    .pipe(stylus({ use: koutoSwiss() }))
-    .pipe(banner(comment, { pkg: pkg }))
+    .pipe(stylus({
+      use: koutoSwiss()
+    }))
+    .pipe(banner(comment, {
+      pkg: pkg
+    }))
     .pipe(rename(file + ".css"))
     .pipe(gulp.dest(dest + "/" + assets + "/" + css))
 
     .pipe(uglifycss())
-    .pipe(banner(comment, { pkg: pkg }))
-    .pipe(rename({ extname: "." + min + ".css" }))
+    .pipe(banner(comment, {
+      pkg: pkg
+    }))
+    .pipe(rename({
+      extname: "." + min + ".css"
+    }))
     .pipe(gulp.dest(dest + "/" + assets + "/" + css));
 });
 

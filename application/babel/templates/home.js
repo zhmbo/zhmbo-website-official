@@ -16,9 +16,17 @@ function home() {
     // 将时间转换为date
     var date = new Date(strtime)
     // 转换时间戳后加 8个小时，github actions的运行环境存在8小时差
-    var time = date.getTime() + 28800000
+    // var time8 = date.getTime() + 28800000
     // 时间戳转日期格式
-    $(update_time).text(new Date(time))
+    // var date8 = new Date(time8)
+    Y = date.getFullYear() + '-';
+    M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+    D = date.getDate() + ' ';
+    h = date.getHours() + ':';
+    m = date.getMinutes() + ':';
+    s = date.getSeconds();
+    console.log(Y + M + D + h + m + s); //呀麻碟
+    $(update_time).text(Y + M + D + h + m + s)
 }
 
 /**
