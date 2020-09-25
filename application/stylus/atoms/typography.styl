@@ -1,27 +1,41 @@
-headline-height= baseline*2.25
-headline-color= contrast
+headline-height = baseline * 2.25;
+headline-color = contrast;
+small-height = baseline * 0.75;
+small-color = grey-low;
 
-small-height= baseline*.75
-small-color= grey-low
+// HEADLINE
+h1, .h1 {
+  margin: 0;
+  margin-bottom: baseline;
+  font-family: family-headline;
+  font-size: font-headline;
+  font-weight: weight-bold;
+  line-height: headline-height;
+  color: headline-color;
+}
 
-//  HEADLINE
-h1, .h1
-  margin: 0
-  margin-bottom: baseline
-  font-family: family-headline
-  font-size: font-headline
-  font-weight: weight-bold
-  line-height: headline-height
-  color: headline-color
+h2, .h2 {
+  margin: 0;
+  margin-bottom: baseline;
+  font-family: family-headline;
+  font-size: font-headline * 0.5;
+  font-weight: weight-bold * 0.5;
+  line-height: headline-height * 0.5;
+  color: headline-color;
+}
 
-//  PARAGRAPH
-p, .p
-  margin: 0
+// PARAGRAPH
+p, .p {
+  margin: 0;
+}
 
-//  SMALL
-small, .small
-  font-size: font-small
-  line-height: small-height
-  color: small-color
-  &.alt
-    font-size: font-small-alt
+// SMALL
+small, .small {
+  font-size: font-small;
+  line-height: small-height;
+  color: small-color;
+
+  &.alt {
+    font-size: font-small-alt;
+  }
+}

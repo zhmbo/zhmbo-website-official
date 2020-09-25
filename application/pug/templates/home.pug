@@ -18,9 +18,16 @@
       a.link.router.color-red(href='#aboutme' title='About Me' target='_blank') About Me
   
   //- FOOTER
-  footer: .links
-    a.link.small.alt(href='https://github.com/itzhangbao' title='Github (@itzhangbao)' target='_blank') Github
-    a.link.small.alt(href='http://facebook.com/itzhangbao' title='Facebook (@itzhangbao)' target='_blank') Facebook
-    a.link.small.alt(href='http://twitter.com/itzhangbao' title='Twitter (@itzhangbao)' target='_blank') Twitter
-    a.link.small.alt(href='http://codepen.io/itzhangbao' title='Codepen (@itzhangbao)' target='_blank') Codepen
-    a.link.small.alt(href='https://medium.com/@itzhangbao' title='Medium (@itzhangbao)' target='_blank') Medium
+  footer 
+    .links
+      a.link.small.alt(href='https://github.com/itzhangbao' title='Github (@itzhangbao)' target='_blank') Github
+      a.link.small.alt(href='http://facebook.com/itzhangbao' title='Facebook (@itzhangbao)' target='_blank') Facebook
+      a.link.small.alt(href='http://twitter.com/itzhangbao' title='Twitter (@itzhangbao)' target='_blank') Twitter
+      a.link.small.alt(href='http://codepen.io/itzhangbao' title='Codepen (@itzhangbao)' target='_blank') Codepen
+      a.link.small.alt(href='https://medium.com/@itzhangbao' title='Medium (@itzhangbao)' target='_blank') Medium
+      //- .p: span We’ll be getting back home within #[time 5] seconds.
+      //- br
+    .small
+      span The site`s been running for #[running_time 520d.0h.0m.0s]
+      br
+      span Last update on: #[update_time 2020.01.01]

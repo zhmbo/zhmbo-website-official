@@ -1,19 +1,19 @@
 {
-  "name": "jumbo-official-website-beta",
+  "name": "jumbo-official-website",
   "version": "1.0.0",
   "description": "Hi, I`m Jumbo, a Developer from 深圳",
   "repository": {
     "type": "git",
-    "url": "git+https://YahiaRefaiea@bitbucket.org/YahiaRefaiea/yahiarefaiea-official-website-beta.git"
+    "url": "git+https://github.com/itzhangbao/blogs/"
   },
   "author": {
-    "name": "Jumbo",
-    "email": "itzhangbao@163.com"
+    "name": "jumbo",
+    "email": "hi@itzhangbao.com"
   },
   "scripts": {
     "deploy": "bash deploy.sh"
   },
-  "url": "http://itzhangbao.com/",
+  "url": "https://www.itzhangbao.com/",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",

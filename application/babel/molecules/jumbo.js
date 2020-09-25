@@ -68,7 +68,7 @@ var drawTheMap = function () {
 
 var init = function (image) {
 	renderer = new THREE.WebGLRenderer({
-		canvas: document.getElementById("yahia"),
+		canvas: document.getElementById("jumbo"),
 		antialias: true,
 		alpha: true
 	});
@@ -140,7 +140,6 @@ var render = function (a) {
 	renderer.render(scene, camera);
 };
 
-// jumbo 添加 加载远程图片
 function loadImageWithUrl(url, callback) {
 	var canvas = document.createElement('CANVAS'),
 		ctx = canvas.getContext('2d'),
@@ -157,9 +156,9 @@ function loadImageWithUrl(url, callback) {
 	img.src = url;
 }
 
-var Yahia = {
+var Jumbo = {
 	load: function (source) {
-		// 原来博主逻辑对应page加载本地固定图片
+		// 0.加载本地图片
 		// var imgData;
 		// if (source == 'home') imgData = 'includes/images/jumbo-home.png';
 		// else if (source == 'secret') imgData = 'includes/images/jumbo-secret.png';
@@ -174,11 +173,11 @@ var Yahia = {
 		// };
 		// image.src = imgData;
 
-		// 第一次修改，将所有图片放在静态页面中随机加载，弊端就是造成静态博客体积太大，每次同步部署的时候tai'hao'shi
+		// 1.将所有图片放在静态页面中随机加载，弊端就是造成静态博客体积太大，每次同步部署的时候tai'hao'shi
 		// var imgName = Math.floor(Math.random() * 365);
 		// imgData = 'includes/images/cartoon/image_' + imgName + '.png';
 
-		// 第二次修改，将图片放进图床中每次进行下载，虽然不会每次都缓存但是好处多多
+		// 2.将图片放进图床中每次进行下载，虽然不会每次都缓存但是好处多多
 		var img_num = Math.floor(Math.random() * 365);
 		var img_url = 'https://cdn.jsdelivr.net/gh/itzhangbao/supplies/img/cartoon/image_' + img_num + '.png';
 		loadImageWithUrl(img_url, function (img) {
