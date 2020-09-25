@@ -15,9 +15,8 @@ jobs: # 工作流
         node-version: [10.x]
 
     steps: # 步骤
-      - name: 校正服务器时间
-        # run: sudo apt install ntpdate -y && sudo ntpdate 0.asia.pool.ntp.org
-        run: date && sudo rm -rf /etc/localtime && sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && date
+      # - name: 校正服务器时间
+      # run: date && sudo rm -rf /etc/localtime && sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && date
       - name: Checkout # 步骤1
         uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
