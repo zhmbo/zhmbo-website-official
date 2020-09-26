@@ -33,29 +33,29 @@ function home() {
     console.log(
         "*******************东区时间************************************"
     );
-    console.log("零时区-伦敦时间：" + getLocalTime(0, lastupdate));
-    console.log("东一区-柏林时间：" + getLocalTime(1, lastupdate));
-    console.log("东二区-雅典时间：" + getLocalTime(2, lastupdate));
-    console.log("东三区-莫斯科时间：" + getLocalTime(3, lastupdate));
-    console.log("东四区-时间：" + getLocalTime(4, lastupdate));
-    console.log("东五区-伊斯兰堡时间：" + getLocalTime(5, lastupdate));
-    console.log("东六区-科伦坡时间：" + getLocalTime(6, lastupdate));
-    console.log("东七区-曼谷时间：" + getLocalTime(7, lastupdate));
-    console.log("东八区-北京时间：" + getLocalTime(8, lastupdate));
-    console.log("东九区-东京时间：" + getLocalTime(9, lastupdate));
-    console.log("东十区-悉尼时间：" + getLocalTime(10, lastupdate));
-    console.log("东十二区-斐济时间：" + getLocalTime(12, lastupdate));
+    console.log("零时区-伦敦时间：" + getLocalTime(0));
+    console.log("东一区-柏林时间：" + getLocalTime(1));
+    console.log("东二区-雅典时间：" + getLocalTime(2));
+    console.log("东三区-莫斯科时间：" + getLocalTime(3));
+    console.log("东四区-时间：" + getLocalTime(4));
+    console.log("东五区-伊斯兰堡时间：" + getLocalTime(5));
+    console.log("东六区-科伦坡时间：" + getLocalTime(6));
+    console.log("东七区-曼谷时间：" + getLocalTime(7));
+    console.log("东八区-北京时间：" + getLocalTime(8));
+    console.log("东九区-东京时间：" + getLocalTime(9));
+    console.log("东十区-悉尼时间：" + getLocalTime(10));
+    console.log("东十二区-斐济时间：" + getLocalTime(12));
     console.log(
         "*******************西区时间************************************"
     );
-    console.log("西十区-斐济时间：" + getLocalTime(-10, lastupdate));
-    console.log("西九区-阿拉斯加时间：" + getLocalTime(-9, lastupdate));
-    console.log("西八区-太平洋时间（美国和加拿大）：" + getLocalTime(-8, lastupdate));
-    console.log("西七区-山地时间（美国和加拿大）：" + getLocalTime(-7, lastupdate));
-    console.log("西六区-中部时间（美国和加拿大）：" + getLocalTime(-6, lastupdate));
-    console.log("西五区-东部时间（美国和加拿大）：" + getLocalTime(-5, lastupdate));
-    console.log("西四区-大西洋时间（加拿大）：" + getLocalTime(-4, lastupdate));
-    console.log("西三区-巴西利亚时间：" + getLocalTime(-3, lastupdate));
+    console.log("西十区-斐济时间：" + getLocalTime(-10));
+    console.log("西九区-阿拉斯加时间：" + getLocalTime(-9));
+    console.log("西八区-太平洋时间（美国和加拿大）：" + getLocalTime(-8));
+    console.log("西七区-山地时间（美国和加拿大）：" + getLocalTime(-7));
+    console.log("西六区-中部时间（美国和加拿大）：" + getLocalTime(-6));
+    console.log("西五区-东部时间（美国和加拿大）：" + getLocalTime(-5));
+    console.log("西四区-大西洋时间（加拿大）：" + getLocalTime(-4));
+    console.log("西三区-巴西利亚时间：" + getLocalTime(-3));
 }
 
 // 得到标准时区的时间的函数
