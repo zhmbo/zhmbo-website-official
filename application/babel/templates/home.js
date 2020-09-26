@@ -14,10 +14,11 @@ function home() {
     // 获取文件最后修改时间
     var strtime = document.lastModified;
     var lastupdate = new Date(strtime);
+    console.log('最后更新修改' + lastupdate);
     // 将时间转换为date
     var date = getLocalTime(8, lastupdate);
 
-    console.log(date);
+    console.log('转换date' + date);
     //
     Y = date.getFullYear() + "-";
     M =
