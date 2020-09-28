@@ -4,6 +4,14 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+# 添加打包日期到home.js
+cd application/babel/templates/
+sed -i "" "1d;2i\\
+var upTime = '`date '+%Y-%m-%d %H:%M:%S'`'\\
+" home.js
+
+cd -
+
 # 执行gulp
 gulp release 
 
