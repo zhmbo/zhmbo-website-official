@@ -18,7 +18,9 @@ function home() {
     // 将时间转换为date
     var date = getLocalTime(8, lastupdate);
 
-    console.log('转换date' + date);
+    console.log('转换date ' + date);
+
+    console.log('现在时间：' + new Date())
     //
     Y = date.getFullYear() + "-";
     M =
