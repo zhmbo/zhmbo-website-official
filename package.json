@@ -11,7 +11,9 @@
     "email": "hi@itzhangbao.com"
   },
   "scripts": {
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "dev": "gulp default",
+    "build": "gulp release"
   },
   "url": "https://www.itzhangbao.com/",
   "devDependencies": {
