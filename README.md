@@ -1,4 +1,4 @@
-# Jumbo Official Website by Jumbo
+# Jumbo's official website
 
 ## Start
 
