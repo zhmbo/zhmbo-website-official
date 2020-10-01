@@ -13,7 +13,8 @@
   "scripts": {
     "deploy": "bash deploy.sh",
     "dev": "gulp default",
-    "build": "gulp release"
+    "build": "gulp release",
+    "gp": "bash git-push.sh"
   },
   "url": "https://www.itzhangbao.com/",
   "devDependencies": {

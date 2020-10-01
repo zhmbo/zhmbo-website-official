@@ -26,13 +26,17 @@ cd release
 
 if [ -z "$CODING_TOKEN" ]; then  # -z 字符串 长度为0则为true；$CODING_TOKEN来自于github仓库`Settings/Secrets`设置的私密环境变量
   msg='deploy'
-  codingUrl=git@e.coding.net:itzhangbao/blog/home.git
+  codingUrl=git@e.coding.net:itzhangbao/website/official.git
 else
   msg='来自github actions的自动部署'
   git config --global user.name "itzhangbao"
   git config --global user.email "itzhangbao@163.com"
-  codingUrl=https://ZYzEthRPkx:${CODING_TOKEN}@e.coding.net/itzhangbao/blog/home.git
+  codingUrl=https://ZYzEthRPkx:${CODING_TOKEN}@e.coding.net/itzhangbao/website/official.git
 fi
+
+git clone -b site-blog $codingUrl blog
+find . -name ".git" | xargs rm -Rf
+
 git init
 git add -A
 git commit -m "${msg}"
