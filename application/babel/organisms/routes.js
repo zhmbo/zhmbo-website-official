@@ -24,7 +24,8 @@ Router.routes = function (callback) {
 
   //  THOUGHTS
   else if (location[0] == 'thoughts' && location[1] === undefined)
-    Router.push('thoughtsAll')
+    // Router.push('thoughtsAll')
+    window.location.href = "/blog"
 
   //  ABOUTME
   else if (location[0] == 'aboutme' && location[1] === undefined)
