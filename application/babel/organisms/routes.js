@@ -32,7 +32,8 @@ Router.routes = function (callback) {
 
   //  BLOG
   else if (location[0] == 'blog' && location[1] === undefined)
-    window.location.href = "blog"
+    window.location.href = "blog",
+    Identity.stop()
 
   //  NOT FOUND
   else Router.push('notFound')
