@@ -24,12 +24,15 @@ Router.routes = function (callback) {
 
   //  THOUGHTS
   else if (location[0] == 'thoughts' && location[1] === undefined)
-    // Router.push('thoughtsAll')
-    window.location.href = "/blog"
+    Router.push('thoughtsAll')
 
   //  ABOUTME
   else if (location[0] == 'aboutme' && location[1] === undefined)
     Router.push('aboutme')
+
+  //  BLOG
+  else if (location[0] == 'blog' && location[1] === undefined)
+    window.location.href = "blog"
 
   //  NOT FOUND
   else Router.push('notFound')
