@@ -22,18 +22,13 @@ Router.routes = function (callback) {
   else if (location[0] == 'projects' && location[1] === undefined)
     Router.push('projectsAll')
 
-  //  THOUGHTS
-  else if (location[0] == 'thoughts' && location[1] === undefined)
-    Router.push('thoughtsAll')
+  //  BLOG
+  else if (location[0] == 'blog' && location[1] === undefined)
+    Router.push('blog')
 
   //  ABOUTME
   else if (location[0] == 'aboutme' && location[1] === undefined)
     Router.push('aboutme')
-
-  //  BLOG
-  else if (location[0] == 'blog' && location[1] === undefined)
-    window.location.href = "blog",
-    Identity.stop()
 
   //  NOT FOUND
   else Router.push('notFound')

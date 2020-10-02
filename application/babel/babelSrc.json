@@ -16,5 +16,6 @@
   "application/babel/templates/secret.js",
   "application/babel/templates/notFound.js",
   "application/babel/templates/home.js",
+  "application/babel/templates/blog.js",
   "application/babel/molecules/loader.js"
 ]
