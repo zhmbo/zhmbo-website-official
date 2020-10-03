@@ -29,6 +29,7 @@ var Submit = {
         dd: JSON.stringify(Submit.data(template, fields))
       },
       dataType: 'json',
+      contentType: 'application/x-www-form-urlencoded',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
         Submit.callback('error', form, template, fields)
       },
