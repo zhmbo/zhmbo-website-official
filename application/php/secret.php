@@ -1,9 +1,9 @@
 <?php
-if (isset($_POST["dd"])) {
-	$data= json_decode($_POST["dd"]);
+if (isset($_REQUEST["dd"])) {
+	$data= json_decode($_REQUEST["dd"]);
 
 	$subject= "New secret delivered from an anonymous";
-	$to= "hi@itzhangbao.com";
+	$to= "itzhangbao@163.com";
 	$message= $data->secret;
 
 	$headers= "MIME-Version: 1.0\r\n";

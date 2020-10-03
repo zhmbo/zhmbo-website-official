@@ -23,7 +23,7 @@ var Submit = {
 
     //  AJAX
     $.ajax({
-      type: 'POST',
+      type: 'GET',
       url: 'includes/php/' + form + '.php',
       data: {
         dd: JSON.stringify(Submit.data(template, fields))
