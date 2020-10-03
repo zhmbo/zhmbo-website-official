@@ -17,7 +17,7 @@ var Submit = {
   push: function (form) {
     var template = $('.template[data-template=' + form + ']')
     var fields = template.find('.field input, .field textarea')
-
+    console.log('啥玩意  ' + JSON.stringify(Submit.data(template, fields)))
     //  WAITING
     Submit.view('[data-status=waiting]', template)
 
@@ -29,7 +29,6 @@ var Submit = {
         dd: JSON.stringify(Submit.data(template, fields))
       },
       dataType: 'json',
-      contentType: 'application/x-www-form-urlencoded',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
         console.log('send mail error', errorThrown)
         Submit.callback('error', form, template, fields)

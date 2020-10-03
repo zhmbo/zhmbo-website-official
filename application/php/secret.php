@@ -5,7 +5,7 @@ if (isset($_GET["dd"])) {
 	$subject= "New secret delivered from an anonymous";
 	$to= "itzhangbao@163.com";
 	$message= $data->secret;
-
+	echo "发送message".$message;
 	$headers= "MIME-Version: 1.0\r\n";
 	$headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
