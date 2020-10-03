@@ -5,8 +5,10 @@ function blog() {
                 var timetext = $('.template[data-template=blog] .p')
                 $(timetext).text("The blog site is loading...");
                 Identity.work()
-                window.location.href = '#'
-                window.location.href = "blog"
+
+                window.history.pushState({}, "home", "#")
+                // window.location.href = '#'
+                window.location.href = "/blog"
             }, 5)
     }, Identity.duration * 1.25)
 }
