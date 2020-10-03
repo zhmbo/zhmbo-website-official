@@ -17,24 +17,22 @@ var Submit = {
   push: function (form) {
     var template = $('.template[data-template=' + form + ']')
     var fields = template.find('.field input, .field textarea')
-    console.log('啥玩意  ' + JSON.stringify(Submit.data(template, fields)))
+
     //  WAITING
     Submit.view('[data-status=waiting]', template)
 
     //  AJAX
     $.ajax({
-      type: 'GET',
+      type: 'POST',
       url: 'includes/php/' + form + '.php',
       data: {
         dd: JSON.stringify(Submit.data(template, fields))
       },
       dataType: 'json',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
-        console.log('send mail error', errorThrown)
         Submit.callback('error', form, template, fields)
       },
       success: function (data) {
-        console.log('send mail success', data)
         Submit.callback('success', form, template, fields)
       }
     })
