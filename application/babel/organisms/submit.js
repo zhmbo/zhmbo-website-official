@@ -31,9 +31,11 @@ var Submit = {
       dataType: 'json',
       contentType: 'application/x-www-form-urlencoded',
       error: function (XMLHttpRequest, textStatus, errorThrown) {
+        console.log('send mail error', errorThrown)
         Submit.callback('error', form, template, fields)
       },
       success: function (data) {
+        console.log('send mail success', data)
         Submit.callback('success', form, template, fields)
       }
     })

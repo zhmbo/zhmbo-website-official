@@ -1,6 +1,6 @@
 <?php
-if (isset($_POST["dd"])) {
-	$data= json_decode($_POST["dd"]);
+if (isset($_GET["dd"])) {
+	$data= json_decode($_GET["dd"]);
 
 	$subject= "New secret delivered from an anonymous";
 	$to= "itzhangbao@163.com";
