@@ -1,10 +1,10 @@
 <?php
-if (isset($_GET["dd"])) {
-	$data= json_decode($_GET["dd"]);
+// if (isset($_GET["dd"])) {
+	// $data= json_decode($_GET["dd"]);
 
 	$subject= "New secret delivered from an anonymous";
 	$to= "itzhangbao@163.com";
-	$message= $data->secret;
+	$message= "i am test";
 	echo "发送message".$message;
 	$headers= "MIME-Version: 1.0\r\n";
 	$headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
@@ -26,5 +26,5 @@ if (isset($_GET["dd"])) {
 	//  RESPONSE
 	$response_array['status']= 'success';
 	echo json_encode($response_array);
-}
+// }
 ?>
