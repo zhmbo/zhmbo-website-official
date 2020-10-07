@@ -2,13 +2,49 @@
   
   //- MAIN
   main
-    .h1
-      span About #[mark Jumbo]
-    span ...
+    .h1.span About #[mark Jumbo]
 
-    .h2
-      span 二级
+    .h2.span #[mark 简介]
+    .p 我是一个来自中国的软件开发者，热衷于钻研互联网前沿科技
+    .p 并且任职于一家互联网公司的#[mark iOS开发工程师]
+
+    .h2.span #[mark 过去]
+    .p 有幸在中国首都#[mark 北京]生活3年，并于2018年单枪匹马赴#[mark 深圳]
+    .p 涉及领域：电商、直播、会议、金融、区块链、游戏等行业
+
+    .h2.span #[mark 现在]
+    .p 任职期间主要负责公司#[mark iOS-SDK]的开发工作
+    .p 其他时间学习和实践我知识范畴以外的技术，并总结记录发表我的技术博客 
+      a.link.router(href='#blog' title='My blog') My blog
+    .p 比如这个网站，一个#[mark gulp]项目涉及： NodeJs、Gulp、Html、JavaScript、CSS、Pug ...
+ 
+    .h2.span #[mark 未知]
+    .p 在我工作和生活允许的情况下，我会继续学习分享互联网新的技术来充实自己
+    .p 继续跟着Apple爸爸的脚步更新iOS技术栈，并整理iOS高级开发知识文集如：逆向、LLVM等知识
+    .p 对后端：Nodejs、Go、Serverless 前端的：Vue、React 非关系数据库：MongoDB等也非常感兴趣
+    .p 做一款品控成功的基于Go微服务+MongoDB+Vue-Admin+Swift的 iOS 移动端产品
+
+    .h2.span #[mark 技能]
+    .p #[mark Github] 的重度使用者，感谢 Github Actions 让我节省了很多工作
+    .p #[mark iOS] OC、Swift5.* Cocoa Foundation UIKit Runtime GCD SQL Runloop
+    .p #[mark Other] Node.js HTML JavaScript Vue Go Lua Shell HTTP/TCP Socket
+    .p #[mark Tools] Xcode VSCode CocosCreator Postman Git Npm Yarn gulp Goland
+    .p #[mark 有趣的] 是我有一个机械制造与自动化的学位证书 ：）
+
+    .h2.span #[mark Find Me]
+    
+    .p E-mail：
+      a.link.color-yellow(href='mailto:hi@itzhangbao.com' title='mail') hi@itzhangbao.com
+    .p Github: 
+      a.link.color-blue(href='https://github.com/itzhangbao' title='Github') github.com/itzhangbao
+    .p 技术博客: 
+      a.link.router.color-green(href='#blog' title='blog') itzhangbao.com/blog
+    
+    .links
+      a.link.router(href='#secret' title='Tell me a secret') Tell me a secret
+      a.link.router(href='#' title='Back to home') Back to home
+
   //- FOOTER
-  footer: .links
-    a.link.router.small.alt(href='#secret' title='Tell me a secret') Tell me a secret
-    a.link.router.small.alt(href='#' title='Back to home') Back to home
+  //- footer: .links
+  //-   a.link.router.small.alt(href='#secret' title='Tell me a secret') Tell me a secret
+  //-   a.link.router.small.alt(href='#' title='Back to home') Back to home

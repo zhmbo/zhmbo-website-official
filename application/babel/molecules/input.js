@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var input = $('.field').find('input, textarea')
-  input.keyup(function() {
+  input.keyup(function () {
     inputTest(this)
   })
 })
@@ -11,11 +11,11 @@ function inputTest(that) {
   var length = $.trim($(that).val()).length
 
   //  FILLED
-  if(length > 0) field.addClass('filled')
+  if (length > 0) field.addClass('filled')
   else field.removeClass('filled')
 
   //  VALIDATED
-  if(length >= 4) {
+  if (length >= 4 && length <= 20) {
     field.addClass('validated')
     form.addClass('validated')
   } else {

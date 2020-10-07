@@ -9,6 +9,8 @@
   "application/babel/molecules/balls.js",
   "application/babel/molecules/stars.js",
   "application/babel/molecules/jumbo.js",
+  "application/babel/molecules/server.js",
+  "application/babel/molecules/system.js",
   "application/babel/organisms/submit.js",
   "application/babel/organisms/router.js",
   "application/babel/organisms/routes.js",

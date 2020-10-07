@@ -24,15 +24,7 @@ var Submit = {
     // 获取留言
     var message = Submit.data(template, fields)["secret"];
 
-    // 声明 class
-    const Todo = AV.Object.extend('Message');
-    // 构建对象
-    const todo = new Todo();
-    // 为属性赋值
-    // todo.set('name', '昵称');
-    todo.set('message', message);
-    // 将对象保存到云端
-    todo.save().then(
+    Server.save(message).then(
       function (object) {
         // 成功保存之后，执行其他逻辑
         Submit.callback('success', form, template, fields)
@@ -43,7 +35,7 @@ var Submit = {
         Submit.callback('error', form, template, fields)
         console.log("保存失败。error：" + error);
       }
-    );
+    )
 
 
     //  AJAX
@@ -83,8 +75,10 @@ var Submit = {
 
 
           var message = Submit.data(template, fields)["secret"];
+          var systeminfo = System.getOS() + '-' + System.getBrowser();
+
           var div = template.find('.div');
-          var msgP = $("<p></p>").text(message); // 以 jQuery 创建新元素
+          var msgP = $("<p></p>").text(systeminfo + ': ' + message); // 以 jQuery 创建新元素
           div.prepend(msgP); // 追加新元素
         }, 750)
       }
