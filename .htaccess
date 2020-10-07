@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteBase /
 
 RewriteCond %{HTTP_HOST} !^m\.
-RewriteRule ^$ https://www.itzhangbao.com/ [R,L]
+RewriteRule ^$ https://itzhangbao.com/ [R,L]

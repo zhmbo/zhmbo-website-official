@@ -16,7 +16,7 @@
     "build": "gulp release",
     "gp": "bash git-push.sh"
   },
-  "url": "https://www.itzhangbao.com/",
+  "url": "https://itzhangbao.com/",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",

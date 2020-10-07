@@ -21,21 +21,46 @@ var Submit = {
     //  WAITING
     Submit.view('[data-status=waiting]', template)
 
-    //  AJAX
-    $.ajax({
-      type: 'POST',
-      url: 'includes/php/' + form + '.php',
-      data: {
-        dd: JSON.stringify(Submit.data(template, fields))
-      },
-      dataType: 'json',
-      error: function (XMLHttpRequest, textStatus, errorThrown) {
-        Submit.callback('error', form, template, fields)
-      },
-      success: function (data) {
+    // 获取留言
+    var message = Submit.data(template, fields)["secret"];
+
+    // 声明 class
+    const Todo = AV.Object.extend('Message');
+    // 构建对象
+    const todo = new Todo();
+    // 为属性赋值
+    // todo.set('name', '昵称');
+    todo.set('message', message);
+    // 将对象保存到云端
+    todo.save().then(
+      function (object) {
+        // 成功保存之后，执行其他逻辑
         Submit.callback('success', form, template, fields)
+        console.log("保存成功。objectId：" + object.id);
+      },
+      function (error) {
+        // 保存失败之后，执行其他逻辑
+        Submit.callback('error', form, template, fields)
+        console.log("保存失败。error：" + error);
       }
-    })
+    );
+
+
+    //  AJAX
+    // $.ajax({
+    //   type: 'POST',
+    //   url: 'includes/php/' + form + '.php',
+    //   data: {
+    //     dd: JSON.stringify(Submit.data(template, fields))
+    //   },
+    //   dataType: 'json',
+    //   error: function (XMLHttpRequest, textStatus, errorThrown) {
+    //     Submit.callback('error', form, template, fields)
+    //   },
+    //   success: function (data) {
+    //     Submit.callback('success', form, template, fields)
+    //   }
+    // })
   },
 
   //  CALLBACK
@@ -55,6 +80,12 @@ var Submit = {
           fields.closest('.form').find('.submit').remove()
           fields.closest('.field').remove()
           template.find('.form .status[data-status=success]').addClass('current')
+
+
+          var message = Submit.data(template, fields)["secret"];
+          var div = template.find('.div');
+          var msgP = $("<p></p>").text(message); // 以 jQuery 创建新元素
+          div.prepend(msgP); // 追加新元素
         }, 750)
       }
 

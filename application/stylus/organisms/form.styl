@@ -1,15 +1,24 @@
-form, .form
-  &:not(.validated) a.link:not(.small)
-    move('down')
-    &:before
-      width: 0
+form, .form {
+  &:not(.validated) a.link:not(.small) {
+    move('down');
 
-  .small
-    z-index: -1
-    position: relative
-    margin-top: baseline*.75
-    color: grey
-    .status
-      makeAbsolute: 0
-      > *
-        hide: 2
+    &:before {
+      width: 0;
+    }
+  }
+
+  .small {
+    z-index: -1;
+    position: relative;
+    margin-top: baseline * 0.75;
+    color: grey;
+
+    .status {
+      makeAbsolute: 0;
+
+      > * {
+        hide: 2;
+      }
+    }
+  }
+}
