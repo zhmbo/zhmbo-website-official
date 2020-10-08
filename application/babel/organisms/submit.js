@@ -78,7 +78,7 @@ var Submit = {
           var systeminfo = System.getOS() + '-' + System.getBrowser();
 
           var div = template.find('.div');
-          var msgP = $("<p></p>").text(systeminfo + ': ' + message); // 以 jQuery 创建新元素
+          var msgP = $("<p></p>").text(returnCitySN.cname + '-' + systeminfo + ': ' + message); // 以 jQuery 创建新元素
           div.prepend(msgP); // 追加新元素
         }, 750)
       }
