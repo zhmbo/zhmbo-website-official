@@ -78,8 +78,10 @@ var Submit = {
           var systeminfo = System.getOS() + '-' + System.getBrowser();
 
           var div = template.find('.div');
-          var msgP = $("<p></p>").text(returnCitySN.cname + '-' + systeminfo + ': ' + message); // 以 jQuery 创建新元素
-          div.prepend(msgP); // 追加新元素
+          var titP = $("<p style='font-size:12px;color:#00897B;'></p>").text(returnCitySN.cname + '-' + systeminfo);
+          var msgP = "<p style='font-size:10px;color:#FFF176'>" + message + "</p>";
+          div.prepend(titP); // 追加新元素
+          titP.append(msgP);
         }, 750)
       }
 

@@ -27,9 +27,10 @@ function secret() {
       div.empty();
       for (var j = array.length - 1; j > -1; j--) {
         secret = array[j];
-
-        var msgP = $("<p></p>").text(secret.city + '-' + secret.os_info + ': ' + secret.message); // 以 jQuery 创建新元素
-        div.append(msgP); // 追加新元素
+        var titP = $("<p style='font-size:12px;color:#00897B;'></p>").text(secret.city + '-' + secret.os_info);
+        var msgP = "<p style='font-size:10px;color:#FFF176'>" + secret.message + "</p>";
+        div.append(titP); // 追加新元素
+        titP.append(msgP);
       }
     })
   }, function (error) {
