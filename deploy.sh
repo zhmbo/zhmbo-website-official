@@ -21,7 +21,6 @@ cd -
 # 一、生成静态文件
 echo "一、生成静态文件"
 gulp release 
-cd release
 
 # 二、配置coding地址
 echo "二、配置coding地址"
@@ -37,6 +36,7 @@ fi
 
 #三、备份到【site-official】
 echo "三、备份到【site-official】"
+cd release
 git init
 git add -A
 git commit -m"${msg}"
