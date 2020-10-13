@@ -18,6 +18,7 @@ var Server = {
         // 为属性赋值
         systeminfo = System.getOS() + '-' + System.getBrowser();
         todo.set('city', returnCitySN.cname)
+        todo.set('cip', returnCitySN.cip);
         todo.set('os_info', systeminfo);
         todo.set('message', message);
         // 将对象保存到云端
