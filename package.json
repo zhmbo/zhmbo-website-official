@@ -14,7 +14,7 @@
     "deploy": "bash deploy.sh",
     "dev": "gulp default",
     "build": "gulp release",
-    "gp": "bash git-push.sh"
+    "git-push": "bash git-push.sh"
   },
   "url": "https://itzhangbao.com/",
   "devDependencies": {

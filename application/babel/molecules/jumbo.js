@@ -189,3 +189,11 @@ var Jumbo = {
 		})
 	}
 }
+
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?340ae86ed0846693ad7ca14ab6123a00";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
