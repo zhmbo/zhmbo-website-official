@@ -6,7 +6,7 @@ var Server = {
         AV.init({
             appId: Server.APP_ID,
             appKey: Server.APP_KEY,
-            serverURL: Server.SERVER_URL,
+            // serverURL: Server.SERVER_URL,
         });
     },
 
