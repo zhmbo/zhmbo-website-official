@@ -1,7 +1,7 @@
 var Server = {
-    APP_ID: "zpnBDHzP0jlcCYvmsyVjauAR-9Nh9j0Va",
-    APP_KEY: "3lQcvLWSf6qG3ta8oCNwNnwk",
-    SERVER_URL: "https://zpnbdhzp.lc-cn-e1-shared.com",
+    APP_ID: "eMrMn2lz8USHXk6QzJlzjpW5-MdYXbMMI",
+    APP_KEY: "Bnu0GIzABXuyooNNUDXcTg47",
+    SERVER_URL: "https://lc-official.itzhangbao.com",
     init: function () {
         AV.init({
             appId: Server.APP_ID,
