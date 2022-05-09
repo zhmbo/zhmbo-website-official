@@ -6,7 +6,7 @@ set -e
 
 # 添加打包日期到home.js 1d:删除第一行 2i 在第二行插入
 cd application/babel/templates/
-if [ -z "$CODING_TOKEN" ]; then # Mac 的sed需要在 -i 后添加备份文件，忽略需要以空字符代替（MAC是BSA ubuntu是GNU）
+if [ -z "$GITHUB_TOKEN" ]; then # Mac 的sed需要在 -i 后添加备份文件，忽略需要以空字符代替（MAC是BSA ubuntu是GNU）
 sed -i "" "1d;2i\\
 var upTime = '`date '+%Y-%m-%d %H:%M:%S'`'\\
 " home.js
