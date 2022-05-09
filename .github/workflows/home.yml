@@ -25,6 +25,6 @@ jobs: # 工作流
           node-version: ${{ matrix.node-version }} # 版本
       - name: run deploy.sh # 步骤3 （同时部署到github和coding）
         env: # 设置环境变量
-          # GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
-          CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # toKen私密变量
+          # CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
         run: npm install && npm install --save-dev gulp@3.9.1 && npm run deploy
