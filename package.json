@@ -8,7 +8,7 @@
   },
   "author": {
     "name": "jumbo",
-    "email": "hi@itzhangbao.ml"
+    "email": "hi@itzhangbao.com"
   },
   "scripts": {
     "deploy": "bash deploy.sh",
