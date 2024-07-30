@@ -18,12 +18,12 @@ var gulp = require("gulp"),
   root = "application",
   dest = "release",
   assets = "includes",
-  file = "jumbo",
+  file = "zhmbo",
   min = "lite",
   css = "stylesheets",
   js = "javascripts",
   img = "images",
-  audio = "audio",
+  // audio = "audio",//音乐
   php = "php",
   //  BANNER COMMENT
   comment =
@@ -131,12 +131,12 @@ gulp.task("img", function () {
     .pipe(gulp.dest(dest + "/" + assets + "/" + img));
 });
 
-//  AUDIO
-gulp.task("audio", function () {
-  return gulp
-    .src(root + "/audio/**/*")
-    .pipe(gulp.dest(dest + "/" + assets + "/" + audio));
-});
+//  AUDIO 音乐
+// gulp.task("audio", function () {
+//   return gulp
+//     .src(root + "/audio/**/*")
+//     .pipe(gulp.dest(dest + "/" + assets + "/" + audio));
+// });
 
 //  PHP
 gulp.task("php", function () {
@@ -156,7 +156,7 @@ gulp.task("watch", function () {
   gulp.watch(root + "/babel/**/*", ["babel", browserSync.reload]);
   gulp.watch(root + "/stylus/**/*", ["stylus", browserSync.reload]);
   gulp.watch(root + "/img/**/*", ["img", browserSync.reload]);
-  gulp.watch(root + "/audio/**/*", ["audio", browserSync.reload]);
+  // gulp.watch(root + "/audio/**/*", ["audio", browserSync.reload]);//音乐
   gulp.watch(root + "/php/**/*", ["php", browserSync.reload]);
 });
 
@@ -168,7 +168,7 @@ gulp.task("default", function () {
     "babel",
     "stylus",
     "img",
-    "audio",
+    // "audio",//音乐
     "php",
     "browserSync",
     "watch",
@@ -183,7 +183,7 @@ gulp.task("release", function () {
     "babel",
     "stylus",
     "img",
-    "audio",
+    // "audio",//音乐
     "php",
     "htaccess",
   ]);

@@ -28,7 +28,7 @@ var Router = {
 				Router.updateTemplate(Router.wrapper[0])
 				window.location.hash = Router.location
 				Router.location = null
-				if (!md.mobile()) Jumbo.load(Router.wrapper[0])
+				if (!md.mobile()) zhmbo.load(Router.wrapper[0])
 
 				//  CALLBACKS
 				Router.callbacks(Router.wrapper[0])

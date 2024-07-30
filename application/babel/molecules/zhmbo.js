@@ -68,7 +68,7 @@ var drawTheMap = function () {
 
 var init = function (image) {
 	renderer = new THREE.WebGLRenderer({
-		canvas: document.getElementById("jumbo"),
+		canvas: document.getElementById("zhmbo"),
 		antialias: true,
 		alpha: true
 	});
@@ -156,17 +156,17 @@ function loadImageWithUrl(url, callback) {
 	img.src = url;
 }
 
-var Jumbo = {
+var zhmbo = {
 	load: function (source) {
 		// 0.加载本地图片
 		// var imgData;
-		// if (source == 'home') imgData = 'includes/images/jumbo-home.png';
-		// else if (source == 'secret') imgData = 'includes/images/jumbo-secret.png';
-		// else if (source == 'bucket') imgData = 'includes/images/jumbo-bucket.png';
-		// else if (source == 'projectsAll') imgData = 'includes/images/jumbo-projects.png';
-		// else if (source == 'thoughtsAll') imgData = 'includes/images/jumbo-thoughts.png';
-		// else if (source == 'aboutme') imgData = 'includes/images/jumbo-aboutme.png';
-		// else if (source == 'notFound') imgData = 'includes/images/jumbo-notFound.png';
+		// if (source == 'home') imgData = 'includes/images/zhmbo-home.png';
+		// else if (source == 'secret') imgData = 'includes/images/zhmbo-secret.png';
+		// else if (source == 'bucket') imgData = 'includes/images/zhmbo-bucket.png';
+		// else if (source == 'projectsAll') imgData = 'includes/images/zhmbo-projects.png';
+		// else if (source == 'thoughtsAll') imgData = 'includes/images/zhmbo-thoughts.png';
+		// else if (source == 'aboutme') imgData = 'includes/images/zhmbo-aboutme.png';
+		// else if (source == 'notFound') imgData = 'includes/images/zhmbo-notFound.png';
 		// var image = document.createElement("img");
 		// image.onload = function () {
 		// 	init(image)
@@ -179,13 +179,14 @@ var Jumbo = {
 
 		// 2.将图片放进图床中每次进行下载，虽然不会每次都缓存但是好处多多
 		var img_num = Math.floor(Math.random() * 365);
-		var img_url = 'https://cdn.jsdelivr.net/gh/itzhangbao/supplies/img/cartoon/image_' + img_num + '.png';
+		// https://cdn.jsdelivr.net/gh/zhmbo/static@master/img/cartoon/image_0.png
+		var img_url = 'https://cdn.jsdelivr.net/gh/zhmbo/static@master/img/cartoon/image_' + img_num + '.png';
 		loadImageWithUrl(img_url, function (img) {
 			var image = document.createElement("img");
 			image.onload = function () {
 				init(image)
 			};
-			image.src = source == 'aboutme' ? 'includes/images/jumbo-aboutme.png' : img;
+			image.src = source == 'aboutme' ? 'includes/images/zhmbo-aboutme.png' : img;
 		})
 	}
 }

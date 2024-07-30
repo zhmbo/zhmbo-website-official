@@ -26,12 +26,12 @@ gulp release
 echo "二、配置coding地址"
 if [ -z "$GITHUB_TOKEN" ]; then  # -z 字符串 长度为0则为true；$GITHUB_TOKEN 来自于github仓库`Settings/Secrets`设置的私密环境变量
   msg='deploy'
-  githubUrl=git@github.com:itzhangbao/itzhangbao.com.git
+  githubUrl=git@github.com:zhmbo/zhmbo.cn.git
 else
   msg='来自github actions的自动部署'
-  git config --global user.name "itzhangbao"
-  git config --global user.email "itzhangbao@163.com"
-  githubUrl=https://itzhangbao:${GITHUB_TOKEN}@github.com/itzhangbao/itzhangbao.com.git
+  git config --global user.name "zhmbo"
+  git config --global user.email "hi@zhmbo.cn"
+  githubUrl=https://zhmbo:${GITHUB_TOKEN}@github.com/zhmbo/zhmbo.cn.git
 fi
 
 #三、备份到【site-official】

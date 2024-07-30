@@ -1,14 +1,14 @@
 {
-  "name": "jumbo-official-website",
+  "name": "zhmbo-official-website",
   "version": "1.0.0",
-  "description": "Hi, I`m Jumbo, a Developer from 深圳",
+  "description": "Hi, I`m zhmbo, a Developer from 深圳",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itzhangbao/blogs/"
+    "url": "git+https://github.com/zhmbo/blogs/"
   },
   "author": {
-    "name": "jumbo",
-    "email": "hi@itzhangbao.com"
+    "name": "zhmbo",
+    "email": "hi@zhmbo.cn"
   },
   "scripts": {
     "deploy": "bash deploy.sh",
@@ -16,7 +16,7 @@
     "build": "gulp release",
     "git-push": "bash git-push.sh"
   },
-  "url": "https://itzhangbao.com/",
+  "url": "https://zhmbo.cn/",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
